@@ -4,4 +4,5 @@
 for 문으로 초기화  
 fill(a, a+len, v) 함수로 초기화
 ## STL vector
+vector<int> v = (n)
 가변 배열
