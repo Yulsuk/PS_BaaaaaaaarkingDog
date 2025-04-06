@@ -11,9 +11,14 @@ int main(){
     cin >> a >> b >> c;
 
     ll val = 1;
-    while(b--){
-        val = val * a % c;
+    while(b > 0){
+        if(b % 2 == 1){
+            val = val * a % c;
+        }
+        a = a * a % c;
+        b = b/2;
     }
+    
 
     cout << val;
 }
