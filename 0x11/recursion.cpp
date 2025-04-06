@@ -1,10 +1,10 @@
 #include <iostream>
 
 using namespace std;
-
+using ll = long long;
 //a^b 를 m 모듈러 연산하면서 나머지 구하기
-long long func1(long long a, long long b, long long m){
-    long long val = 1;
+ll func1(ll a, ll b, ll m){
+    ll val = 1;
     while(b--){
         val = val * a % m;
     }
@@ -18,6 +18,18 @@ int func2(int a, int b, int m){
         val = val * a;
     }
     return val % m;
+}
+
+//지수의 2진수가 1인 부분만 연산. O(log b)
+ll func3(ll a, ll b, ll m){
+    ll val = 1;
+    while(b > 0){
+        if(b%2 == 1){
+            val = val * a % m;
+        }
+        a = a * a % m;
+        b = b/2;
+    }
 }
 
 int main(){
