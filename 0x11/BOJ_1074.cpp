@@ -4,7 +4,7 @@ using namespace std;
 
 int z_order(int n, int x, int y) {
     if (n == 0) return 0;
-    int half = 1 << (n-1);        //한 변의 길이의 절반(2^n-1)
+    int half = 1 << (n-1);        //한 변의 길이의 절반(2^(n-1))
     int block_size = half * half; //한 블럭의 크기
 
     //4등분이 핵심..!
